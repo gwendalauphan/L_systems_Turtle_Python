@@ -1,10 +1,12 @@
 import sys
+import os
 
 def setFileName(args):
     """récupération des emplacements des fichiers si spécifiés 
     sinon le nom est demandé à l'utilisateur"""
     inputFileName = ""
     outputFileName = "resultat.py"                                             #valeur par défaut du fichier de sortie
+    folder_name = "resultats"
 
     while len(args) > 1:                                                       #tant qu'il y a des arguments à lire, on traite les areguments (ils viennent par paire: le comutateur et la valeur)
         if args[0] == '-i':                                                    #si c'est le comutateur du fichier d'entrée, on atribue la valeur à la variable
@@ -14,6 +16,12 @@ def setFileName(args):
         else:
             print(f"Argument {args[0]} non reconnus")                          #si l'argument n'est pas reconnus, un message est envoyé à l'utilisateur
         args = args[2:]
+
+    outputFileName = os.path.join(folder_name, outputFileName)
+
+    # Créer le dossier s'il n'existe pas
+    if not os.path.exists(folder_name):
+        os.makedirs(folder_name)
 
     return inputFileName, outputFileName
 

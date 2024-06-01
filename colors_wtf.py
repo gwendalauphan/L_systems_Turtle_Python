@@ -1,3 +1,4 @@
+import sys
 from main import setFileName, readData, generate
 
 def translateWithColor(processed, config):
@@ -14,7 +15,8 @@ def translateWithColor(processed, config):
     return result
 
 def mainColor():
-    inputFileName, outputFileName = setFileName()
+    args = sys.argv[1:]                                                        #récupération des arguments passés lors de l'execution du programme, on n'as pas besoins du premier (nom du fichier executé)
+    inputFileName, outputFileName = setFileName(args)  
     config = readData(inputFileName)
     processed = generate(config)
     result = translateWithColor(processed, config)
