@@ -4,24 +4,6 @@ Ce projet, réalisé en Python 3 en utilisant la bibliothèque Turtle, implémen
 
 ![Intro](docs/generating-trees.png)
 
-## Fonctionnalités
-
-- Simulation de L-systèmes contextuels sur plusieurs cycles.
-- Interprétation de commandes symboliques pour manipuler la tortue graphique :
-  - **a**: baisser le crayon
-  - **b**: relever le crayon
-  - **+**: tourner vers la droite
-  - **-**: tourner vers la gauche
-  - **\***: faire demi-tour
-  - **[**: début de branche
-  - **]**: fin de branche
-  - **l**: taille de crayon de 6
-  - **m**: taille de crayon de 3
-  - **s**: taille de crayon de 1
-  - **r**: couleur rouge
-  - **g**: couleur vert
-  - **b**: couleur bleue
-
 ## Prérequis
 
 Assurez-vous d'avoir Python 3.x installé sur votre machine. Vous pouvez télécharger Python ici: [Python.org](https://www.python.org/downloads/).
@@ -31,6 +13,8 @@ Assurez-vous d'avoir Python 3.x installé sur votre machine. Vous pouvez téléc
 Clonez ce dépôt en local :
 
 ```bash
+python3 -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
@@ -75,3 +59,22 @@ python3 tests_unitaires.py
 ## Rendu Visuel
 
 ![Exemple l-system en couleurs](docs/exemple_l_system.png)
+
+
+## Fonctionnalités
+
+- Simulation de L-systèmes contextuels sur plusieurs cycles.
+- Interprétation de commandes symboliques pour manipuler la tortue graphique :
+  - **a**: baisser le crayon
+  - **b**: relever le crayon
+  - **+**: tourner vers la droite
+  - **-**: tourner vers la gauche
+  - **\***: faire demi-tour
+  - **[**: début de branche
+  - **]**: fin de branche
+  - **l**: taille de crayon de 6
+  - **m**: taille de crayon de 3
+  - **s**: taille de crayon de 1
+  - **r**: couleur rouge
+  - **g**: couleur vert
+  - **b**: couleur bleue
